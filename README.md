@@ -15,20 +15,31 @@ Source principale : "The complete javascript course" par _Jonas Schmedtmann_ (20
 - [La référence JavaScript par le MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 
-## 02 JavaScript - Les bases du langage, 2e partie (03:59:48)
+## 02 JavaScript - Les bases du langage, 2e partie
 
 ### Une première structure de contrôle : les tests (ou expressions conditionnelles)
 
-- 014 (8:38) If  else Statements.mp4 : Les instructions if / else
+- L'instruction conditionnelle IF
+- Le branchement IF / ELSE
+- Les tests imbriqués
+- Le IF / ELSE IF / ELSE
+- La logique booléenne
+- L'opérateur ternaire
+- Le switch (avec ou sans break)
+- Les valeurs truthy et falsy
+
+- 014 (8:38) If else Statements.mp4 : Les instructions if / else
 - 015 (9:52) Boolean Logic.mp4 : La logique boléenne
-- 016 (13:03) The Ternary Operator and Switch Statements.mp4 : L'opérateur ternaire
+- 016 (13:03) The Ternary Operator and Switch Statements.mp4 : L'opérateur ternaire et le Switch
 - 017 (8:03) Truthy and Falsy Values and Equality Operators.mp4 : Les valeurs "Truthy" et "Falsy" et les opérateurs d'égalité
 
 - 018 (2:10) Coding Challenge 2.mp4 : Deuxième challenge
 - 019 (8:17) Coding Challenge 2 Solution.mp4 : Solution
 
-### Les fonctions
-
-- 020 Functions.mp4 : Les fonctions
-- 021 021 Function Statements and Expressions.mp4 : 
+- Prépa 1 : Calculer une facture avec une ristourne conditionnelle
+- Prépa 2 : Les restos du cœur
+- Prépa 3 : kw
+- Prépa 4 : Ristourne
+- Prépa 5 : Bissextile
+- Prépa 6 : Date valide
 
