@@ -34,6 +34,8 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
 
 // 16 - 2. L'instruction Switch
 
+// a) Switch avec des break
+
 /* 
 1. Initialisez la variable job à la valeur "instituteur"
 2. Utilisez un switch pour affciher :
@@ -75,5 +77,25 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
  	 affichez "Je n'ai pas compris !"
 */
 
+// b) Switch sans break
+
+// L'instruction `break` fait sortir du bloc du switch.  On ne souhaite pas toujours sortir, dans ce cas, on peut ne pas mettre de `break`
+
+/* 
+1. Demandez à l'utilisateur d'entrer le numéro du jour de la semaine
+2. Affichez ensuite dans la console le message suivant : "Les jours suivants se sont déjà écoulés depuis le début de la semaine : …, …, …"
+*/
+
+
+
+
+
+/* Ici, toutes les instructions "console.log" entre la ligne case:… et l'instruction break seront exécutées, et on obtient donc une liste de jours. Notez bien qu'il faut quand même un breas avant le default, sans quoi ce message d'erreur apparaîtra toujours à la fin de notre liste de jours… Notez qu'on aurait pu aussi écrire le default en premier, suivi d'un break puis la liste de tous les case. */
+
+
+// Un cas d'utilisation concret très utile pour un switch
+
+/* Switch peut sembler curieux, mais dans certaines situations, il est particulièrement utile. Par exemple, imaginez un script qui accepte la saisie au clavier et l'utilise pour déplacer un sprite – beaucoup de jeux vous demanderont d''utiliser les touches fléchées ou les touches A et D pour vous déplcaer de gauche à droite. En JavaScript, les pressions de touches sont représentées par un objet d'événement (que nous aborderons un peu plus loin dans le cours) avec une propriété contenant une valeur numérique qui correspond à la touche pressée. Par exemple, la lettre A est représentée par le code 65, la flèche gauche par le code 37, etc.
+Voici un canevas de code qui permettrait de gérer les déplacements grâce aux touches */
 
 

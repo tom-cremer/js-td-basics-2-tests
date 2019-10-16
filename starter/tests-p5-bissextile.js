@@ -1,5 +1,5 @@
 /*
-PRÉPA 5 :
+TESTS - PRÉPA 5 : Bissextile
 Ecrire un programme qui teste si une année entrée par l’utilisateur est une année bissextile.
 */
 
@@ -37,7 +37,9 @@ Etapes :
 					 |						 |			 |			 |
 					 B						 NB			 B			 NB
 	
-3. en fonction du résulat, affichez le message "… est une année bissextile" ou "… est une année non bissextile"	
+3. en fonction du résulat, affichez le message
+	"… est une année bissextile" ou
+	"… est une année non bissextile"	
 4. Vérifiez votre programme pour tous les cas de figure :
 	* une année non divisible par 4 (par ex. 2006)
 	* une année divisible par 4 mais pas par 100 (par ex. 2004)

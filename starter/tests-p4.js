@@ -1,4 +1,0 @@
-/*
-PRÉPA 4
-Un magasin fait 10% de réduction pour des achats dont le montant est supérieur à 50€ s’il y a au moins 3 enfants dans la famille ou si le montant des achats est supérieur à 125€. Sinon, il fait 5% de réduction. Attention, les ristournes ne sont pas cumulables. Ecrire un programme JS qui affiche le montant de la réduction accordée sur base de la situation de l’acheteur et du montant de ses achats.
-*/
