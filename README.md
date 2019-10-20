@@ -2,7 +2,7 @@
 
 ## 02 JavaScript - Les bases du langage, 2e partie
 
-### Une première structure de contrôle : les alternatives (ou expressions conditionnelles)
+### Une première structure de contrôle : les instructions conditionnelles et alternatives
 
 #### Table des matières
 
@@ -15,15 +15,15 @@
 - Le switch (avec ou sans break)
 - Les valeurs truthy et falsy
 
-#### Vidéos
+#### Supports
 
-- 014 (8:38) If else Statements.mp4 : Les instructions if / else
-- 015 (9:52) Boolean Logic.mp4 : La logique boléenne
-- 016 (13:03) The Ternary Operator and Switch Statements.mp4 : L'opérateur ternaire et le Switch
-- 017 (8:03) Truthy and Falsy Values and Equality Operators.mp4 : Les valeurs "Truthy" et "Falsy" et les opérateurs d'égalité
+- 014 Les instructions if / else
+- 015 La logique boléenne
+- 016 L'opérateur ternaire et le Switch
+- 017 Les valeurs "Truthy" et "Falsy" et les opérateurs d'égalité
 
-- 018 (2:10) Coding Challenge 2.mp4 : Deuxième challenge
-- 019 (8:17) Coding Challenge 2 Solution.mp4 : Solution
+- 018 Deuxième challenge
+- 019 Solution
 
 #### Prépas
 
