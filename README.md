@@ -2,13 +2,13 @@
 
 ## 02 JavaScript - Les bases du langage, 2e partie
 
-### Une première structure de contrôle : les tests (ou expressions conditionnelles)
+### Une première structure de contrôle : les alternatives (ou expressions conditionnelles)
 
 #### Table des matières
 
 - L'instruction conditionnelle IF
 - Le branchement IF / ELSE
-- Les tests imbriqués
+- Les alternatives imbriquées
 - Le IF / ELSE IF / ELSE
 - La logique booléenne
 - L'opérateur ternaire
