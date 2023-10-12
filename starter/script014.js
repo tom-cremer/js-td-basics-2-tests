@@ -25,6 +25,7 @@ if (false) {
     console.log("Bon, je cause toujours, mais vu que je suis dans un bloc d'instructions soumis à une condition qui est toujours fausse, ce que je dis ne va jamais s'afficher")
 }
 
+
 /*
 1. Demandez à l'utilisateur d'entrer un nombre et enregistrez ce nombre (ATTENTION, prenez bien soin qu'il s'agisse bien d'un nombre et pas d'une chaîne de caractères !) dans une constante nombre 
 2. Si ce nombre est positif (et seulement dans ce cas), affichez "… est positif"
