@@ -60,7 +60,13 @@ if (user){
 2. Si ce nombre est positif, affichez "… est positif", sinon, affichez "… est négatif ou nul"
 */
 
+const nombre = prompt("Entrez un nombre: ");
 
+if (nombre > 0) {
+    console.log(`${nombre} est positif`);
+} else {
+    console.log(`${nombre} est négatif ou nul`);
+}
 
 /* 
 1. Initialisez la variable firstName à  John et enregistrez son état civil ('single') dans une variable civilStatus
@@ -68,7 +74,13 @@ if (user){
 3. Changez l'état civil de John à ('married') et retestez
 */
 
+const firstName = "John";
+const civilStatus = "single"
 
+if (civilStatus === "married") {
+} else {
+    console.log(`${firstName} va on l'espère, bientôt se marier :)`);
+}
 
 /* 
 1. Créez à présent une variable isMarried pour enregistrer l'état civil de John et, en imaginant qu'il est marié, initialisez-la à true
@@ -76,12 +88,27 @@ if (user){
 3. Retestez votre code après avoir changé la valeur de isMarried à false
 */
 
+let isMarried = true;
 
+if (isMarried) {
+    console.log("John est marié !");
+} else {
+    console.log("John va, on l'espère, bientôt se marier :)");
+}
+
+isMarried = false;
+
+if (isMarried) {
+    console.log("John est marié !");
+} else {
+    console.log("John va, on l'espère, bientôt se marier :)");
+}
 
 /*
 1. Enregristrez la taille et le poids de John (78 kg, 1.69 m) et de Mark (92 kg, 1.95 m) dans 4 variables
 2. Calculez leur BMI et affichez, selon le cas, "Le BMI de Mark est plus élevé que celui de John" ou "Le BMI de John est plus élevé que celui de Mark"
 */
+
 
 
 
