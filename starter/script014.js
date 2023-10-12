@@ -42,7 +42,7 @@ Il enregistre alors l'entrée dans une variable nom et, seulement si l'utilisate
 */
 
 console.log("Bonjour");
-let user = prompt("Réponse: ");
+const user = prompt("Réponse: ");
 if (user){
     if (user.toLowerCase() === "bonjour") {
         console.log("Toi, tu es poli, tu me dis bonjour, je veux bien te parler… Comment t'appelles-tu ?")
