@@ -111,11 +111,43 @@ if (isMarried) {
 */
 
 
+const poidsJohnInitial = 78; // poids en kg
+const tailleJohnInitial = 1.69; // taille en mètres
+
+const poidsMarkInitial = 92; // poids en kg
+const tailleMarkInitial = 1.95; // taille en mètres
+
+
+const bmiJohn = poidsJohnInitial / (tailleJohnInitial * tailleJohnInitial);
+const bmiMark = poidsMarkInitial / (tailleMarkInitial * tailleMarkInitial);
+
+
+if (bmiMark > bmiJohn) {
+    console.log("Le BMI de Mark est plus élevé que celui de John.");
+} else if (bmiJohn > bmiMark) {
+    console.log("Le BMI de John est plus élevé que celui de Mark.");
+} else {
+    console.log("Le BMI de Mark est égal à celui de John.");
+}
 
 
 /*
 Ecrire un programme qui teste si un nombre entré par l’utilisateur est pair ou impair.
 */
 
+
+const nombreEntier = parseInt(prompt("Entrez un nombre :"));
+
+
+
+if (!isNaN(nombreEntier)) { // Vérifiez si la conversion en nombre est réussie
+    if (nombreEntier % 2 === 0) {
+        console.log(nombreEntier + " est un nombre pair.");
+    } else {
+        console.log(nombreEntier + " est un nombre impair.");
+    }
+} else {
+    console.log("Veuillez entrer un nombre valide.");
+}
 
 

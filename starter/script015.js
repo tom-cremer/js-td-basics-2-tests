@@ -7,6 +7,8 @@
 (source : https://openclassrooms.com/fr/courses/2984401-apprenez-a-coder-avec-javascript/3043921-ajoutez-des-conditions)
 */
 
+let nombreEntier;
+
 // 15-1. - LES OPÉRATEURS LOGIQUES
 
 // 1°) L'opérateur logique ET
@@ -15,6 +17,11 @@
 1. Affichez dans la console le résultat de toutes les combinaisons possibles de true ET false
 2. Avant de lancer votre navigateur et d'ouvrir la console, notez ici pour chaque ligne le résultat attendu dans un commentaire
 */
+
+console.log(true && true);   // true ET true => true
+console.log(true && false);  // true ET false => false
+console.log(false && true);  // false ET true => false
+console.log(false && false); // false ET false => false
 
 
 
@@ -26,6 +33,20 @@
 */
 
 
+nombreEntier = parseInt(prompt("Entrez un nombre :"));
+
+
+if (!isNaN(nombreEntier)) { // Vérifiez si la conversion en nombre est réussie
+    if (nombreEntier >= 0 && nombreEntier <= 100) {
+        console.log(`${nombreEntier} est compris entre 0 et 100.`);
+    } else {
+        console.log(` ${nombreEntier} n'est pas compris entre 0 et 100.`);
+    }
+} else {
+    console.log("Error");
+}
+
+
 
 // 2°) L'opérateur logique OU
 
@@ -34,7 +55,10 @@
 2. Avant de lancer votre navigateur et d'ouvrir la console, notez ici pour chauqe ligne le résultat attendu dans un commentaire
 */
 
-
+console.log(true || true);   // true OU true => true
+console.log(true || false);  // true OU false => true
+console.log(false || true);  // false OU true => true
+console.log(false || false); // false OU false => false
 
 // Une condition qui utilise l'opérateur logique OU
 
@@ -43,12 +67,25 @@
 2. Testez si le nombre en dehors de l'intervalle [0, 100]. Si c'est le cas, affichez "… est en dehors de l'intervalle [0, 100]".
 */
 
+nombreEntier = parseInt(prompt("Entrez un nombre :"));
+
+if (!isNaN(nombreEntier)) { // Vérifiez si la conversion en nombre est réussie
+    if (nombreEntier < 0 || nombreEntier > 100) {
+        console.log(nombreEntier + " est en dehors de l'intervalle [0, 100].");
+    } else {
+        console.log(nombreEntier + " est dans l'intervalle [0, 100].");
+    }
+} else {
+    console.log("Error");
+}
 
 
 // 3°) L'opérateur logique NOT
 
 /* Affichez dans la console le résultat NOT true puis le résultat de NOT false */
 
+console.log(!true);  // NOT true => false
+console.log(!false); // NOT false => true
 
 
 // Une condition qui utilise l'opérateur logique NOT
@@ -57,6 +94,19 @@
 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 2. Si ce nombre n'est pas supérieur à 100, affichez "… est inférieur ou égal à 100".
 */
+
+
+nombreEntier = parseInt(prompt("Entrez un nombre :"));
+
+if (!isNaN(nombreEntier)) { // Vérifiez si la conversion en nombre est réussie
+    if (!(nombreEntier > 100)) {
+        console.log(`${nombreEntier} est inférieur ou égal à 100.`);
+    } else {
+        console.log(`${nombreEntier} est supérieur à 100.`);
+    }
+} else {
+    console.log("Error");
+}
 
 
 // 15-2. - LES ALTERNATIVES MULTIPLES
@@ -70,6 +120,21 @@
   2°) sinon, affichez "… est nul"
 */
 
+nombreEntier = parseInt(prompt("Entrez un nombre :"));
+
+if (!isNaN(nombreEntier)) { // Vérifiez si la conversion en nombre est réussie
+    if (nombreEntier > 0) {
+        console.log(nombreEntier + " est positif.");
+    } else { // Le nombre est négatif ou nul
+        if (nombreEntier < 0) {
+            console.log(nombreEntier + " est négatif.");
+        } else {
+            console.log(nombreEntier + " est nul.");
+        }
+    }
+} else {
+    console.log("Error");
+}
 
 
 // 2°) Autre écriture pour le même test : le if / elseif / else
@@ -79,6 +144,20 @@ BUT : réaliser le même test que l'exercice précédent mais avec l'écriture i
 1. Demandez à l'utilisateur d'entrer un nombre et stockez-le dans une variable nombre
 2. Affichez "… est positif", "… est négatif" ou "… est nul" selon le cas
 */
+
+nombreEntier = parseInt(prompt("Entrez un nombre :"));
+
+if (!isNaN(nombreEntier)) { // Vérifiez si la conversion en nombre est réussie
+    if (nombreEntier > 0) {
+        console.log(`${nombreEntier} est positif.`);
+    } else if (nombreEntier < 0) {
+        console.log(`${nombreEntier} est négatif.`);
+    } else {
+        console.log(`${nombreEntier} est nul.`);
+    }
+} else {
+    console.log("Error");
+}
 
 
 
@@ -94,6 +173,21 @@ d) sinon, affichez "… est un homme."
 */
 
 
+const firstName = "John";
+
+const age = 25;
+
+if (age < 13) {
+    console.log(`${firstName} est un petit garçon.`);
+} else if (age >= 13 && age <= 20) {
+    console.log(`${firstName} est un adolescent.`);
+} else if (age > 20 && age <= 30) {
+    console.log(`${firstName} est un jeune homme.`);
+} else {
+    console.log(`${firstName} est un homme.`);
+}
+
+
 
 // Autre application
 
@@ -107,7 +201,21 @@ b) s'il y a du vent, affichez "Sortez en pull."
 c) s'il pleut, affichez "Sortez en blouson."
 d) s'il neige, affichez "Restez au chaud à la maison."
 e) dans tous les autres cas (si la personne n'a rien répondu de tout ça —
-  c.-à-d. qu'elle n'a entré aucun de ces qautre mots-là), affichez "Je n'ai pas compris !"
+  c.-à-d. qu'elle n'a entré aucun de ces quatre mots-là), affichez "Je n'ai pas compris !"
 */
 
+
+const meteo = prompt("Quel temps fait-il dehors ? Répondez par un des quatre mots suivants : soleil, vent, pluie ou neige.").toLowerCase();
+
+if (meteo === "soleil") {
+    console.log("Sortez en t-shirt.");
+} else if (meteo === "vent") {
+    console.log("Sortez en pull.");
+} else if (meteo === "pluie") {
+    console.log("Sortez en blouson.");
+} else if (meteo === "neige") {
+    console.log("Restez au chaud à la maison.");
+} else {
+    console.log("Je n'ai pas compris !");
+}
 

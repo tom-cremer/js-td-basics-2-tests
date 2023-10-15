@@ -6,8 +6,8 @@
 Initalisez la variable firstName à John et la variable age à 14
 */
 
-var firstName = 'John';
-var age = 14;
+let firstName = 'John';
+let age = 14;
 
 // 16 - 1. L'opérateur ternaire
 
@@ -18,6 +18,12 @@ var age = 14;
 */
 
 
+// Utilisez l'opérateur ternaire pour afficher le message approprié
+const message = (age >= 18) ? "John boit des bières." : "John boit des jus.";
+
+console.log(message);
+
+
 
 /*
 MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou une autre valeur à une variable selon qu'une condition est remplie ou pas
@@ -26,10 +32,24 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
 */
 
 
+// Utilisation de l'expression ternaire pour affecter la valeur "bières" ou "jus" à la variable drink
+let drink;
+
+drink = (age >= 18) ? "bières" : "jus";
+
+console.log(`John boit des ${drink}.`);
 
 /* Faites la même chose en utilisant un if / else */
 
+// Utilisation d'une structure if / else pour affecter la valeur "bières" ou "jus" à la variable drink
 
+
+if (age >= 18) {
+    drink = "bières";
+} else {
+    drink = "jus";
+}
+console.log(`John boit des ${drink}.`);
 
 
 // 16 - 2. L'instruction Switch
@@ -46,6 +66,23 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
 3. Testez les différents cas de figure en changeant la profession de John
 */
 
+const job = "instituteur";
+
+switch (job) {
+    case "professeur":
+    case "instituteur":
+        console.log("John enseigne la programmation aux enfants.");
+        break;
+    case "chauffeur":
+        console.log("John conduit un taxi à Lisbonne.");
+        break;
+    case "designer":
+        console.log("John conçoit de beaux sites web.");
+        break;
+    default:
+        console.log("John fait autre chose.");
+}
+
 
 
 /* 
@@ -58,6 +95,23 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
 3. Testez les différents cas de figure en changeant l'âge de John
 4. Testez avec un âge de 7 ans en enlevant la 2e instruction break pour voir ce que cela a comme impact
 */
+
+
+age = 56;
+
+switch (true) {
+    case age < 13:
+        console.log("John est un garçon.");
+        break;
+    case age >= 13 && age <= 20:
+        console.log("John est un adolescent.");
+        break;
+    case age > 20 && age <= 30:
+        console.log("John est un jeune homme.");
+        break;
+    default:
+        console.log("John est un homme.");
+}
 
 
 
@@ -77,7 +131,42 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
  	 affichez "Je n'ai pas compris !"
 */
 
+let meteo = prompt("Quel temps fait-il dehors ? Répondez par un des quatre mots suivants : soleil, vent, pluie ou neige.");
+
+switch (meteo.toLowerCase()) {
+    case "soleil":
+        console.log("Sortez en t-shirt.");
+        break;
+    case "vent":
+        console.log("Sortez en pull.");
+        break;
+    case "pluie":
+        console.log("Sortez en blouson.");
+        break;
+    case "neige":
+        console.log("Restez au chaud à la maison.");
+        break;
+    default:
+        console.log("Je n'ai pas compris !");
+}
+
 // b) Switch sans break
+
+meteo = prompt("Quel temps fait-il dehors ? Répondez par un des quatre mots suivants : soleil, vent, pluie ou neige.");
+
+switch (meteo.toLowerCase()) {
+    case "soleil":
+        console.log("Sortez en t-shirt.");
+    case "vent":
+        console.log("Sortez en pull.");
+    case "pluie":
+        console.log("Sortez en blouson.");
+    case "neige":
+        console.log("Restez au chaud à la maison.");
+    default:
+        console.log("Je n'ai pas compris !");
+}
+
 
 // L'instruction `break` fait sortir du bloc du switch.  On ne souhaite pas toujours sortir, dans ce cas, on peut ne pas mettre de `break`
 
@@ -86,11 +175,57 @@ MEILLEURE PRATIQUE : utiliser l'expression ternaire pour affecter une valeur ou 
 2. Affichez ensuite dans la console le message suivant : "Les jours suivants se sont déjà écoulés depuis le début de la semaine : …, …, …"
 */
 
+let jourNumero = parseInt(prompt("Entrez le numéro du jour de la semaine (1 pour lundi, 2 pour mardi, etc.) :"));
 
+switch (jourNumero) {
+    case 1: // lundi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : Premier jour de la semaine");
+        break;
+    case 2: // mardi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : lundi");
+        break;
+    case 3: // mercredi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : lundi, mardi");
+        break;
+    case 4: // jeudi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : lundi, mardi, mercredi");
+        break;
+    case 5: // vendredi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : lundi, mardi, mercredi, jeudi");
+        break;
+    case 6: // samedi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : lundi, mardi, mercredi, jeudi, vendredi");
+        break;
+    case 7: // dimanche
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : lundi, mardi, mercredi, jeudi, vendredi, samedi");
+        break;
+    default:
+        console.log("Numéro de jour de la semaine invalide. Veuillez entrer un numéro entre 1 et 7.");
+}
 
+/* Ici, toutes les instructions "console.log" entre la ligne case:… et l'instruction break seront exécutées, et on obtient donc une liste de jours. Notez bien qu'il faut quand même un break avant le default, sans quoi ce message d'erreur apparaîtra toujours à la fin de notre liste de jours… Notez qu'on aurait pu aussi écrire le default en premier, suivi d'un break puis la liste de tous les case. */
 
+jourNumero = parseInt(prompt("Entrez le numéro du jour de la semaine (1 pour lundi, 2 pour mardi, etc.) :"));
 
-/* Ici, toutes les instructions "console.log" entre la ligne case:… et l'instruction break seront exécutées, et on obtient donc une liste de jours. Notez bien qu'il faut quand même un breas avant le default, sans quoi ce message d'erreur apparaîtra toujours à la fin de notre liste de jours… Notez qu'on aurait pu aussi écrire le default en premier, suivi d'un break puis la liste de tous les case. */
+switch (jourNumero) {
+    case 1: // lundi
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : Premier jour de la semaine");
+    case 2: // mardi
+        console.log("lundi");
+    case 3: // mercredi
+        console.log("lundi, mardi");
+    case 4: // jeudi
+        console.log("lundi, mardi, mercredi");
+    case 5: // vendredi
+        console.log("lundi, mardi, mercredi, jeudi");
+    case 6: // samedi
+        console.log("lundi, mardi, mercredi, jeudi, vendredi");
+    case 7: // dimanche
+        console.log("lundi, mardi, mercredi, jeudi, vendredi, samedi");
+        break;
+    default:
+        console.log("Numéro de jour de la semaine invalide. Veuillez entrer un numéro entre 1 et 7.");
+}
 
 
 // Un cas d'utilisation concret très utile pour un switch
