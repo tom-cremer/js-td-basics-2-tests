@@ -15,3 +15,31 @@ calcule et affiche la somme versée aux restos du cœur.
 - 200€ (remise de 20€, 2€ versés)
 - 1000€ (remise de 100€, 2€ versés)
 */
+
+const montantAchat = parseInt(prompt("Montant d'achat: "));
+const remisePourcentage = 10
+let montantRemise = 0;
+let don = 0;
+const donMaximum = 2;
+
+if (!isNaN(montantAchat)) {
+    if (montantAchat > 25) {
+        montantRemise = montantAchat * (remisePourcentage / 100);
+
+        if (montantRemise > 5) {
+
+            don = montantRemise * (remisePourcentage / 100);
+
+            if (don >= 2) {
+                don = donMaximum;
+            }
+        }
+    }
+
+    console.log(`montant Remise ${montantRemise} €`);
+    console.log(`Montant d'Achat ${montantAchat} €`);
+    console.log(`Montant Versés ${don.toFixed(2)} €`)
+
+} else {
+    console.log("Error, Only number are allowed")
+}

@@ -20,3 +20,32 @@ Valeurs de test :
 - 71 KW => 30 * 25 + 20 * 20 + 20 * 15 + 1 * 10 = 750 + 400 + 300 + 10 = 1460 centimes = 14.6 €
 - 80 KW => 30 * 25 + 20 * 20 + 20 * 15 + 10 * 10 = 750 + 400 + 300 + 100 = 1550 centimes = 15.5 €
 */
+
+const kwConsomme = parseInt(prompt("Entrez le nombre de kw consommé"));
+
+// Coût par tranche de KW
+const coutPremiereTranche = 25;  // 0 à 30 KW
+const coutDeuxiemeTranche = 20;  // 31 à 50 KW
+const coutTroisiemeTranche = 15; // 51 à 70 KW
+const coutQuatriemeTranche = 10; // À partir de 71 KW
+
+let prix = 0;
+
+if (!isNaN(kwConsomme)){
+    if (kwConsomme <= 30){
+        prix = kwConsomme * 25
+    } else if (kwConsomme <= 50){
+        prix = 30 * coutPremiereTranche + (kwConsomme - 30) * coutDeuxiemeTranche
+    } else if (kwConsomme <= 70) {
+        prix = 30 * coutPremiereTranche + 20 * coutDeuxiemeTranche + (kwConsomme - 50) * coutTroisiemeTranche
+    } else {
+        prix = 30 * coutPremiereTranche + 20 * coutDeuxiemeTranche + 20 * coutTroisiemeTranche + (kwConsomme - 70) * coutQuatriemeTranche
+    }
+    const prixEnEuros = prix / 100
+    console.log(`${prixEnEuros} €`);
+} else{
+    console.log("Error, Valeur non valide")
+}
+
+
+
